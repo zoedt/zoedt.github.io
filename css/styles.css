@@ -23,13 +23,6 @@ body{
 	width: auto;
 	text-align: center;
 	font-weight: 900;
-	cursor: pointer;
-/*    animation: fadeInUp .75s ease;
-    -webkit-animation: fadeInUp .75s ease;
-    animation-delay: .25s;
-    -webkit-animation-delay: .25s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;*/
 }
 
 #main-menu {
