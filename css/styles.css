@@ -1,0 +1,61 @@
+h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+/*	color: #80cbca;
+*/	color: #66A9C4;
+	margin: 20px 0 0 0;
+}
+
+body{
+	background-image: url("../img/lightpaperfibers/lightpaperfibers.png");
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	text-align: center;
+
+}
+
+#name {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	font-size: 100px;
+	margin: 200px auto 0 auto;
+	letter-spacing: 5px;
+	width: auto;
+	text-align: center;
+	font-weight: 900;
+	cursor: pointer;
+/*    animation: fadeInUp .75s ease;
+    -webkit-animation: fadeInUp .75s ease;
+    animation-delay: .25s;
+    -webkit-animation-delay: .25s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;*/
+}
+
+#main-menu {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+    display: block;
+    text-transform: uppercase;
+	text-align: center;
+	margin: 20px auto 0 auto;
+}
+
+#main-menu ul{
+	list-style-type: none;
+	padding: 0;
+	height: 20px;
+	text-align: center;
+}
+
+#main-menu li{
+	display: inline-block;
+	float: center;
+	margin: 0 45px;
+	position: relative;
+}
+
+a{
+	color: #939191;
+	text-decoration: none;
+}
