@@ -52,3 +52,7 @@ a{
 	color: #939191;
 	text-decoration: none;
 }
+
+a:hover{
+	color: #66A9C4;;
+}
