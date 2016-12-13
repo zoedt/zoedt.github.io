@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>no face</title>
+    <link rel="stylesheet" href="paperjs/examples/css/style.css">
+    <script type="text/javascript" src="paperjs/dist/paper-full.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+		tool.minDistance = 10;
+		tool.maxDistance = 45;
+
+		var path;
+
+		var raster = new Raster('final/DSC_0389.png');
+		raster.scale(.2);
+		raster.position = view.center;
+		//new Point(100, view.size.height);
+
+		function onMouseDown(event) {
+			path = new Path();
+			path.fillColor = {
+				hue: Math.random() * 360,
+				saturation: 1,
+				brightness: 1
+			};
+
+			path.add(event.point);
+		}
+
+		function onMouseDrag(event) {
+			var step = event.delta / 2;
+			step.angle += 90;
+			
+			var top = event.middlePoint + step;
+			var bottom = event.middlePoint - step;
+			
+			path.add(top);
+			path.insert(0, bottom);
+			path.smooth();
+		}
+
+		function onMouseUp(event) {
+			path.add(event.point);
+			path.closed = true;
+			path.smooth();
+		}
+    </script>
+</head>
+<body background="http://orig15.deviantart.net/e43b/f/2010/013/c/f/graph_paper_by_rawen713.jpg">
+    <canvas id="canvas" resize></canvas>
+    <img src="final/DSC_0389.png">
+</body>
+</html>

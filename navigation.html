@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>navigation</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #street-view {
+        height: 50%;
+        width: 50%;
+        margin: 25% 0 0 25%;
+      }
+      img {
+        position:absolute;
+        top:-20%;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        width: 50%;
+        height: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="final/1.gif">
+
+    <div id="street-view"></div>
+    <script>
+      var panorama;
+
+      var positions = [
+                        [47.502800, 19.065890], //my apartment in budapest
+                        [47.661671, -122.313128], //UW
+                        [47.624044, -122.335819], //obidos
+                        [29.751921, -95.359363], //george brown convention center
+                        [37.784318, -122.407702],  //westfield
+                        [48.798331, 2.327473], //arcueil-cachan
+                        [40.416775, -3.707008] //san gines in madrid
+                      ];
+
+      var pos = positions[Math.floor(Math.random() * positions.length)];
+
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'),
+            {
+              position: {lat: pos[0], lng: pos[1]},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+      }
+    </script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfG9hQFlrCCUfHfFin5T33HhsY6vvLUVc&callback=initialize">
+    </script>
+
+  </body>
+</html>
