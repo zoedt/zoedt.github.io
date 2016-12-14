@@ -26,11 +26,14 @@
       }
     </style>
   </head>
-  <body oncontextmenu="return false;">
+  <body>
     <img src="final/1.gif">
 
     <div id="street-view"></div>
     <script>
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
       var panorama;
 
       var positions = [
@@ -53,6 +56,10 @@
               pov: {heading: 165, pitch: 0},
               zoom: 1
             });
+
+        panorama.setOptions({
+          addressControl: false
+        });
       }
     </script>
     <script async defer
