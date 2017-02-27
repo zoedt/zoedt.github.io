@@ -847,7 +847,7 @@ img {
   max-width: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: bold;
 }
 
@@ -865,6 +865,29 @@ h1{
   font-size: 3rem;
 }
 
+h3 {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2;
+  font-size: 18px;
+  font-size: 1.9rem;
+}
+
+#big-text{
+  padding-bottom: 30px;
+}
+
+.cd-timeline-content img {
+  display:block;
+  margin:auto;
+  width: 75%;
+}
 
 /* --------------------------------
 
